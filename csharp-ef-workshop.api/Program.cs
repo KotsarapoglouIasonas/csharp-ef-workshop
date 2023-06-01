@@ -36,6 +36,8 @@ namespace csharp_ef_workshop.api
 
             app.ConfigurePersonApi();
 
+            app.Seed();
+
             app.MapControllers();
 
             app.Run();
