@@ -52,7 +52,9 @@ namespace csharp_ef_workshop.api.Data
                         person.Id = x;
                         person.Name = $"{Firstnames[r.Next(Firstnames.Count)]} {Surnames[r.Next(Surnames.Count)]}";
                         person.Age = r.Next(50);
+                        person.DOB = DateTime.UtcNow;
                         people.Add(person);
+                        
                     }
                     db.People.AddRange(people);
                     db.SaveChanges();
