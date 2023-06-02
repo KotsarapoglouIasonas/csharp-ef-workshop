@@ -8,7 +8,7 @@ namespace csharp_ef_workshop.api.Data
     {
         private static string GetConnectionString()
         {
-            string jsonSettings = File.ReadAllText("appsettings.json");
+            string jsonSettings = File.ReadAllText("appsettings.Development.json");
             JObject configuration = JObject.Parse(jsonSettings);
             return configuration["ConnectionStrings"]["DefaultConnectionString"].ToString();
         }
